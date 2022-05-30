@@ -4,13 +4,17 @@ public class StringClass {
 
 	public static void main(String[] args) {
 
-		StringBuffer b= new StringBuffer ("apple");
-		StringBuffer b1 = new StringBuffer ("c");
+		String a = "apple";
+		String a1 = "system";
+		System.out.println(System.identityHashCode(a));
+		a = a.concat(a1);
+		System.out.println(System.identityHashCode(a));
+
+		StringBuffer b = new StringBuffer("apple");
+		StringBuffer b1 = new StringBuffer("c");
 		System.out.println(System.identityHashCode(b));
 		b = b.append(b1);
-		System.out.println(System.identityHashCode(b));	
-
-		
+		System.out.println(System.identityHashCode(b));
 
 	}
 }
